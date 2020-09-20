@@ -14,7 +14,7 @@ function getName (func) {
   const keys = Object.keys(cache)
 
   for (var i = 0; i < keys.length; i++) {
-    if (cache[keys[i]].exports === func) {
+    if (cache[keys[i]] && cache[keys[i]].exports === func) {
       return keys[i]
     }
   }
